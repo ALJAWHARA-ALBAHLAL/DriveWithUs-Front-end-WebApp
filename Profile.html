@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href= "DriveWithUs.css">
+	<title> Drive With Us - Profile</title>
+<style>
+
+.hhhi{
+ margin-left: auto;
+    margin-right: auto;  
+    padding-top:0.5em;
+	padding-right: 1em;
+	padding-bottom:0.5em;
+	padding-left: 1em;
+}
+   
+	
+table{
+border-spacing: 0; 
+border-collapse: collapse; 
+border-radius:6px;
+border: 1px solid #ddd;
+max-width:800px; 
+width:750px;
+align-items:center;
+margin-left:auto;
+margin-right:auto;
+padding-bottom: 6em;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  }
+  tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+th{ 
+	height:30px;
+	background: #4d4dff;
+	font-size:16px;
+}
+</style>	
+</head>
+<body>
+<header>
+	
+		<a href="register.html" accesskey="r" class="ButtonLogin">Register</a>
+		<a href="login.html" class="ButtonLogin">Login</a>
+		
+		
+	<a href = "Home.html">
+	<img src="images/Logo.png" alt="logo" width= "200" height="200"></a>
+
+	<nav>
+	<div class ="navigation">
+
+	<ul>
+		<li><a href="Home.html" accesskey="h">Home</a></li>
+
+	<li><a href="Lessons.html" accesskey="l"><i class ="fa fa-user"></i>Lessons</a>
+	<div class ="List">
+		<ul>
+			<li><a href="Lesson1.html">Lesson 1</a> </li>
+			<li><a href="Lesson2.html">Lesson 2</a> <li>
+			<li><a href="Lesson3.html">Lesson 3</a></li>
+			<li><a href="Lesson4.html">Lesson 4</a></li>
+		</ul>
+	</div>
+	</li>
+
+	
+		<li><a href="DiagnosisTest.html" accesskey="t"><i class ="fa fa-user"></i>Diagnosis Tets</a>
+	<div class ="List">
+		<ul>
+		    <li><a href="Test1.html">Test 1</a> </li>
+			<li><a href="Test2.html">Test 2</a> <li>
+		</ul>
+	</div>
+	</li>
+
+		<li><a href="Profile.html" accesskey="p">Profile</a></li>
+		<li><a href="ContactUs.html" accesskey="c">Contact Us</a></li>
+		<li><a href="AboutUs.html" accesskey="a">About Us</a><li>
+		<li><a href="Sitemap.html" accesskey="s">Sitemap</a><li>
+
+	</ul>
+	</div>
+	</nav>
+	
+<div class="breadcrumb">
+<span><a href="Home.html"> Home </a></span>
+<span> &#62; </span>
+<span>Profile </span> 
+</div>
+
+</header>
+
+
+<main>
+<div class="hhhi">
+<form>
+<fieldset>
+<h3 style="text-align:center;"> Title</h3>
+<legend> profile information </legend>
+<hr>
+  <img src="images/Profilepicture.png" alt="Avatar" class="avatar" >Welcome vistor name
+  <br>
+  
+
+ <!--********************************* Here Phase3 order table ************************************************** --> 
+<h1 style="font-size: 20px; 
+color:black;
+font-weight: normal;
+text-align:center; ">Click the button to order the table, by Evaluation page</h1>
+<p style="
+font-size: 15px; 
+color:gray;
+font-weight: normal;
+text-align:center; 
+padding-top: 0.5em;
+padding-right: 4em;
+padding-left: 4em;">The first time you click the button, the order is ascending,<br>Click again and the order will be descending:
+<div class="buttonCon">
+<div class="verticali-center">
+<button class="J-button"  onclick="sortTable(0)" style="cursor: pointer; vertical-align:middle;"><span>Sort table</span></button>
+</div>
+</div>
+<br><br><br><br>
+
+<table id= "myTable">
+<caption style="font-size:20px; font-weight:bold; text-align: center; padding-bottom: 0.5em;">Evaluations</caption>
+<tr>
+<!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+<th>Evaluation page</th>
+<th>Number of attempts</th>
+<th>Grade </th>
+  </tr>
+  <tr>
+  <td>#2</td>
+  <td>2</td>
+  <td>90%</td>
+  </tr>
+ 
+  <tr>
+ <td>#1</td>
+ <td>1</td>
+ <td>87%</td>
+  </tr>
+ 
+  <tr>
+  <td>#4</td>
+  <td>1</td>
+  <td>93%</td>
+  </tr>
+ 
+  <tr>
+  <td>#3</td>
+  <td>1</td>
+  <td>99%</td>
+  </tr>
+</table>
+
+<br><br><br><br><br>
+</fieldset>
+</form>
+</div>
+</main>
+
+<footer>
+	<img src="images/ksu.png" alt="copy rights" width= "120" height="50">
+	<p>&#169; Drive With Us | 312IT Project </p>
+</footer>
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

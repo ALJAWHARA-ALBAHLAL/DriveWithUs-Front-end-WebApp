@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href= "DriveWithUs.css">
+
+<title> Drive With Us - Test 1 </title>
+<script src ="DriveWithUs.js"> </script>
+
+</head>
+<body onpageshow ="randomQuizTest1()">
+
+<header>
+	
+		<a href="register.html" accesskey="r" class="ButtonLogin">Register</a>
+		<a href="login.html" class="ButtonLogin">Login</a>
+		
+		
+	<a href = "Home.html">
+	<img src="images/Logo.png" alt="logo" width= "200" height="200"></a>
+
+	<nav>
+	<div class ="navigation">
+
+	<ul>
+		<li><a href="Home.html" accesskey="h">Home</a></li>
+
+	<li><a href="Lessons.html" accesskey="l"><i class ="fa fa-user"></i>Lessons</a>
+	<div class ="List">
+		<ul>
+			<li><a href="Lesson1.html">Lesson 1</a> </li>
+			<li><a href="Lesson2.html">Lesson 2</a> <li>
+			<li><a href="Lesson3.html">Lesson 3</a></li>
+			<li><a href="Lesson4.html">Lesson 4</a></li>
+		</ul>
+	</div>
+	</li>
+
+	
+		<li><a href="DiagnosisTest.html" accesskey="t"><i class ="fa fa-user"></i>Diagnosis Test</a>
+	<div class ="List">
+		<ul>
+		    <li><a href="Test1.html">Test 1</a> </li>
+			<li><a href="Test2.html">Test 2</a> <li>
+		</ul>
+	</div>
+	</li>
+
+		<li><a href="Profile.html" accesskey="p">Profile</a></li>
+		<li><a href="ContactUs.html" accesskey="c">Contact Us</a></li>
+		<li><a href="AboutUs.html" accesskey="a">About Us</a><li>
+		<li><a href="Sitemap.html" accesskey="s">Sitemap</a><li>
+
+	</ul>
+	</div>
+	</nav>
+
+<div class="breadcrumb">
+<span><a href="Home.html"> Home </a></span>
+<span> &#62; </span>
+<span><a href="DiagnosisTest.html">Diagnosis Test</a> </span> 
+<span> &#62; </span>
+<span>Test 1</span>
+</div>
+
+</header>
+<aside>
+</aside>
+<main>
+
+
+
+<div id = "testOne">
+<form name ="testOne" action="Profile.html" onsubmit = "Allfunctions()">
+
+<div class="Radio">
+<div id="1">
+<div class=" item2"  id ="t1q1div">
+	
+	<h1>It essential to find ?  <text id="check001" class="textanswer" ></text>  </h1>
+	
+	
+	<label class="container">Accelerator
+	  <input type="radio" checked="checked" name="essentialFind"  id="t1q1r1">
+	  <span class="checkmark"></span>
+	</label> <br>
+	<label class="container">Break Pedals
+	  <input type="radio" name="essentialFind" id="t1q1r2">
+	  <span class="checkmark"></span>
+	</label><br>
+	<label class="container">All of the above
+	  <input type="radio" name="essentialFind" id="t1q1r3">
+	  <span class="checkmark"></span>
+	</label><br>
+	
+	</div>
+</div>
+<div id="2">
+<div class=" item1" id="t1q2div"><h1>To start your car the first step is ?  <text id="check002" class="textanswer" ></text></h1>
+		<label class="container">Put your foot on the break
+		  <input type="radio" checked="checked" name="StartCar" id="t1q2r1">
+		  <span class="checkmark"></span>
+		</label> <br>
+		<label class="container">Release the hand break 
+		  <input type="radio" name="StartCar"  id="t1q2r2">
+		  <span class="checkmark"></span>
+		</label><br>
+		<label class="container">Put your key in the ignition and turn it
+		  <input type="radio" name="StartCar" id="t1q2r3">
+		  <span class="checkmark"></span>
+		</label><br>
+		
+		</div><br>
+</div>
+
+<div id="3">
+<div class="item1" class="3">
+	<h1> In parallel parking what is NOT true ?  </h1>
+	<text id="check003" class="textanswer" ></text>
+	<label class="container">Check your mirrors
+		<input type="radio" checked="checked" name="parallel" value="1" id="t1q3a1">
+		</label> <br>
+		<label class="container">Find a spot that looks small
+		<input type="radio" name="parallel" value="2" id="t1q3a2">
+		</label> <br>
+		<label class="container">Turn steering wheel all the way
+		<input type="radio" name="parallel" value="3" id="t1q3a3">
+		</label> <br>
+</div>
+</div>
+
+</div>
+
+<div class="downlist">
+	<div id="4">
+	<div class=" item2" id="t1q4">	
+<h1>Windshield washer fluid is used to ?    <text id="check004" class="textanswer" ></text>  </h1>
+<div class="custom-select" >
+  <select id="select1">
+    <option value="1">Select</option>
+    <option value="1">Cleaning the windshield</option>
+    <option value="2">Cooling system's weakest structural component</option>
+  </select>
+</div>
+</div>
+	</div>
+	<div id="5">
+	<div class=" item2" id="t1q5">	
+	<h1>Exhaust system is used to ?    <text id="check005" class="textanswer" ></text></h1>
+	<div class="custom-select" >
+	  <select id="select2">
+	  <option value="1">Select</option>
+		<option value="1">Cooling system's weakest structural component</option>
+		<option value="2">Guide reaction exhaust gases</option>
+	  </select>
+	</div>
+	</div><br>
+	</div>
+	<div id="6">
+	
+	<div class="item2" id="t1q6">	
+		<h1>Breaks usually take about 6 months to check on regularly ? <text id="check006" class="textanswer" ></text></h1>
+		<div class="custom-select" >
+			<select id = "select3">
+			<option value="1">Select</option>
+			<option value="2">True</option>
+			<option value="3">False</option>
+			</select>
+			</div>
+	</div>
+</div>
+</div>
+
+
+<div class="Checkbox">
+<div id="7">
+	<div class="item1" id="7">
+	<h2>Hoses are made of? <text id="check007" class="textanswer" ></text></h2>
+	
+		<ul>
+			<li><input type="checkbox" name="HosesMade" value="1" id="t1q7o1" checked="checked" > Propylene</li>
+			<li><input type="checkbox" name="HosesMade" value="2" id="t1q7o2">Flexible rubber</li>
+			<li><input type="checkbox" name="HosesMade" value="3" id="t1q7o3">Ethylene glycol</li>
+		</ul>
+	</div>
+</div>
+<div id="8">
+	<div class="item1" >
+	<h1>Motor oil is used to ?   <text id="check008" class="textanswer" ></text>     </h1>
+	<label class="container">Lubricate engine parts 
+	  <input type="checkbox" checked="checked" name="OilUsed" id="t1q8o1">
+	  <span class="checkmark"></span>
+	</label><br>
+	<label class="container">Cooling system's weakest structural component
+	  <input type="checkbox" name="OilUsed" id="t1q8o2">
+	  <span class="checkmark"></span>
+	</label><br>
+
+	<label class="container">Keep your vehicle's tyres in contact with the road surface.
+	  <input type="checkbox" name="OilUsed" id="t1q8o3">
+	  <span class="checkmark"></span>
+	</label><br>
+
+	</div><br>
+</div>
+<div id=9>
+	<div class="item1" >
+	<h2>The most important road signs are ? <text id="check009" class="textanswer" ></text></h2>
+	
+		<ul>
+			<li><input type="checkbox" name="RoadSigns" value="1" id="t1q9o1" checked="checked">Warning signs</li>
+			<li><input type="checkbox" name="RoadSigns" value="2" id="t1q9o2">Prohibitory road signs</li>
+			<li><input type="checkbox" name="RoadSigns" value="3" id="t1q9o3">Informative Road Signs</li>
+		</ul>
+	</div>
+</div>
+</div>
+<div class="shortanswer">
+
+	<div class="item2" id="10">
+	<div id="t1q10">
+		<h2>How to minimize distraction? <text id="check010" class="textanswer" ></text></h2>
+		
+		<input type="text" id ="min" name="min" required="">
+		</div>
+	</div>
+
+	<div class="item2" id="11">
+	<div id="t1q11">
+	
+		<h2>If you are driving forward, you should put your car in ? <text id="check011" class="textanswer" ></text></h2>
+		<input type="text" id =putCar name="putCar" required="">
+		</div>
+		</div>
+	
+	<div class="item2" id="12">
+	<div id="t1q12">
+	
+		<h2>Curve to road signs can be either Right? <text id="check012" class="textanswer" ></text></h2>
+		<input type="text" id =right name="right" required="">
+		</div>
+	</div>
+</div>
+
+<input type="submit" id="TestOneButton"  onclick="return Allfunctions()" class ="Button" value="Submit">
+
+</form>
+</div>
+</main>
+
+<footer>
+	<img src="images/ksu.png" alt="copy rights" width= "120" height="50">
+	<p>&#169; Drive With Us | 312IT Project </p>
+</footer>
+</body>
+</html>

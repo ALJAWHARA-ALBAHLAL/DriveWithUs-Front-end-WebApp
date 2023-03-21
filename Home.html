@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" href= "DriveWithUs.css">
+	<script src="DriveWithUs.js"> </script>
+	
+	<title> Drive With Us </title>
+</head>
+
+
+<body>
+
+	<header>
+	
+		<a href="register.html" accesskey="r" class="ButtonLogin">Register</a>
+		<a href="login.html" class="ButtonLogin">Login</a>
+	   <!--            div for thanos snap          -->
+		
+
+	<img id = "hompageLogo" onClick="R()" src="https://i.ibb.co/6JY5BSy/Logo.png" alt="logo" height="200"/>
+
+        <!--                                        -->
+ <script src="stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="html2canvas.min.js"></script>
+<script src="chance.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+
+      <script>
+var imageDataArray = [];
+var canvasCount = 35;
+var Numstart="false";
+var d5 = document.getElementById("reverse");
+$("#hompageLogo").click(function () {
+  html2canvas($(".thanos")[0]).then(canvas => {
+  Numstart="true";
+    //capture all div data as image
+    ctx = canvas.getContext("2d");
+    var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    var pixelArr = imageData.data;
+
+    createBlankImageData(imageData);
+
+    //put pixel info to imageDataArray (Weighted Distributed)
+    for (let i = 0; i < pixelArr.length; i += 4) {if (window.CP.shouldStopExecution(0)) break;
+      //find the highest probability canvas the pixel should be in
+      let p = Math.floor(i / pixelArr.length * canvasCount);
+      let a = imageDataArray[weightedRandomDistrib(p)];
+
+      a[i] = pixelArr[i];
+      a[i + 1] = pixelArr[i + 1];
+      a[i + 2] = pixelArr[i + 2];
+      a[i + 3] = pixelArr[i + 3];
+    }
+
+    //create canvas for each imageData and append to target element
+    window.CP.exitedLoop(0);for (let i = 0; i < canvasCount; i++) {if (window.CP.shouldStopExecution(1)) break;
+      let c = newCanvasFromImageData(imageDataArray[i], canvas.width, canvas.height);
+
+      c.classList.add("dust");
+      $(".thanos").append(c);
+    }
+
+    //clear all children except the canvas
+    window.CP.exitedLoop(1);$(".thanos").children().not(".dust").fadeOut(3500);
+
+    //apply animation
+    $(".dust").each(function (index) {
+      animateBlur($(this), 0.8, 800);
+      setTimeout(() => {
+        animateTransform($(this), 100, -100, chance.integer({ min: -15, max: 15 }), 800 + 110 * index);
+      }, 70 * index);
+
+      //remove the canvas from DOM tree when faded
+      $(this).delay(70 * index).fadeOut(110 * index + 800, "easeInQuint", () => {$(this).remove();});
+    });
+  });
+});
+function weightedRandomDistrib(peak) {
+  var prob = [],seq = [];
+
+  for (let i = 0; i < canvasCount; i++) {if (window.CP.shouldStopExecution(2)) break;
+    prob.push(Math.pow(canvasCount - Math.abs(peak - i), 3));
+    seq.push(i);
+  }window.CP.exitedLoop(2);
+
+  return chance.weighted(seq, prob);
+}
+
+function animateBlur(elem, radius, duration) {
+  var r = 0;
+
+  $({ rad: 0 }).animate({ rad: radius }, {
+    duration: duration,
+    easing: "easeOutQuad",
+    step: function (now) {
+      elem.css({
+        filter: 'blur(' + now + 'px)' });
+
+    } });
+
+}
+
+function animateTransform(elem, sx, sy, angle, duration) {
+  var td = tx = ty = 0;
+
+  $({ x: 0, y: 0, deg: 0 }).animate({ x: sx, y: sy, deg: angle }, {
+    duration: duration,
+    easing: "easeInQuad",
+    step: function (now, fx) {
+      if (fx.prop == "x")
+      tx = now;else
+      if (fx.prop == "y")
+      ty = now;else
+      if (fx.prop == "deg")
+      td = now;
+      elem.css({
+        transform: 'rotate(' + td + 'deg)' + 'translate(' + tx + 'px,' + ty + 'px)' });
+
+    } });
+
+}
+
+function createBlankImageData(imageData) {
+  for (let i = 0; i < canvasCount; i++) {if (window.CP.shouldStopExecution(3)) break;
+    let arr = new Uint8ClampedArray(imageData.data);
+
+    for (let j = 0; j < arr.length; j++) {if (window.CP.shouldStopExecution(4)) break;
+      arr[j] = 0;
+    }window.CP.exitedLoop(4);
+
+    imageDataArray.push(arr);
+  }window.CP.exitedLoop(3);
+}
+
+function newCanvasFromImageData(imageDataArray, w, h) {
+  var canvas = document.createElement('canvas');
+
+  canvas.width = w;
+  canvas.height = h;
+  tempCtx = canvas.getContext("2d");
+  tempCtx.putImageData(new ImageData(imageDataArray, w, h), 0, 0);
+
+  return canvas;
+}
+function R(){
+	if(Numstart=="true"){
+		location.reload(true);
+		}
+		else 
+		return false;
+}
+
+//# sourceURL=pen.js
+    </script>
+        <!--                                        -->
+	<nav>
+	<div class ="navigation">
+
+	<ul>
+		<li><a href="Home.html" accesskey="h">Home</a></li>
+
+	<li><a href="Lessons.html" accesskey="l"><i class ="fa fa-user"></i>Lessons</a>
+	<div class ="List">
+		<ul>
+			<li><a href="Lesson1.html">Lesson 1</a> </li>
+			<li><a href="Lesson2.html">Lesson 2</a> <li>
+			<li><a href="Lesson3.html">Lesson 3</a></li>
+			<li><a href="Lesson4.html">Lesson 4</a></li>
+		</ul>
+	</div>
+	</li>
+
+	
+		<li><a href="DiagnosisTest.html" accesskey="t"><i class ="fa fa-user"></i>Diagnosis Test</a>
+	<div class ="List">
+		<ul>
+		    <li><a href="Test1.html">Test 1</a> </li>
+			<li><a href="Test2.html">Test 2</a> <li>
+		</ul>
+	</div>
+	</li>
+
+		<li><a href="Profile.html" accesskey="p">Profile</a></li>
+		<li><a href="ContactUs.html" accesskey="c">Contact Us</a></li>
+		<li><a href="AboutUs.html" accesskey="a">About Us</a><li>
+		<li><a href="Sitemap.html" accesskey="s">Sitemap</a><li>
+
+	</ul>
+	</div>
+	</nav>
+
+
+
+
+					<!--         breadcrumb         -->
+	<div class="breadcrumb">
+	<a href="Home.html">Home</a></div>
+</header>
+
+
+<main> 
+
+					<!--         Article 1         -->
+
+<div class ="article">
+<p id="GFG"></p>
+<div class="carss">
+<img src="images/carAnmi.png" alt="" width= "90" height="90">
+</div>
+	<div class = "welcome">
+
+	<header>
+	<h1>Welcome New Driver!</h1>
+	</header>
+
+	<p>
+		Drive With Us will help you to take driving lessons easily, 
+		with fun lessons and diagnosis tests. 
+		<br>
+		Our website gives you the freedom to study, learn, and pass the lesson at your own pace. 
+		<br>
+		You will learn everything needed to pass your driving exam.
+		<br>
+		You will save your time and money learning through us!.
+	</p>
+	</div>
+</div>
+
+
+					<!--         Article 2         -->
+        
+<div class ="article">
+<div class="thanos" id="reverse">
+	<div class = "StratLearning">
+
+	<img src="https://i.ibb.co/Dbsjbqn/Start.png" alt="StratLearning" width= "400" height="150"> 
+
+	<p>
+	We provide lessons with different types of formats, don't sit and join us on the learning trip!
+	</p>
+
+
+					<!--         "Start Learning" Button         -->
+					
+	<a href="Lessons.html" class="Button">Start Learning</a>
+	
+	</div>
+	</div>
+</div>
+<div class = "RecentlyAdded">
+
+	<fieldset>
+	<legend>Recently added</legend>
+
+	<div class="allPosts">
+
+		<div class="post">
+			<a href="Lesson4.html"> <img src="images/car.png" alt="car" style="width:100%"></a> 
+			<p>Learn what are the elements of regular maintenance required by cars? 
+			And when does it require maintenance?</p>
+			
+			<div class = myLinks>
+			<a href="Lesson4.html" accesskey="4" >Start Lesson 4</a>
+			</div>
+		</div> 
+	
+		<div class="post">
+			<a href="Test1.html"> <img src="images/test1.png" alt="Test 1" style="width:100%"></a> 
+			<p>It's the time to test yourself!</p>
+			<div class = myLinks>
+			<a href="Test1.html" accesskey="1"> Start Test 1</a>
+			</div>
+		</div> 
+	
+		<div class="post">
+			<a href="Test2.html"> <img src="images/test2.png" alt="Test 2" style="width:100%"></a> 
+					<p>Fun test waiting for you, are you ready?!</p>
+			<div class = myLinks>		
+			<a href="Test2.html" accesskey="2"> Start Test 2</a>
+			</div>
+		</div> 
+	
+	</div>
+
+	</fieldset>
+</div>
+
+</main>
+
+
+<footer>
+	<img src="images/ksu.png" alt="copy rights" width= "120" height="50">
+	<p>&#169; Drive With Us | 312IT Project </p>
+</footer>
+
+</body>
+</html>

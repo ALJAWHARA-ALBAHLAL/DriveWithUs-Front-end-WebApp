@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href= "DriveWithUs.css">
+	<title> Drive With Us - Test 2 </title>
+	<script src ="DriveWithUs.js"> </script>
+	<script src="jquery.min.js"></script>
+</head>
+<body onpageshow ="randomQuizTest2()">
+<header>
+	
+		<a href="register.html" accesskey="r" class="ButtonLogin">Register</a>
+		<a href="login.html" class="ButtonLogin">Login</a>
+		
+		
+	<a href = "Home.html">
+	<img src="images/Logo.png" alt="logo" width= "200" height="200"></a>
+
+	<nav>
+	<div class ="navigation">
+
+	<ul>
+		<li><a href="Home.html" accesskey="h">Home</a></li>
+
+	<li><a href="Lessons.html" accesskey="l"><i class ="fa fa-user"></i>Lessons</a>
+	<div class ="List">
+		<ul>
+			<li><a href="Lesson1.html">Lesson 1</a> </li>
+			<li><a href="Lesson2.html">Lesson 2</a> <li>
+			<li><a href="Lesson3.html">Lesson 3</a></li>
+			<li><a href="Lesson4.html">Lesson 4</a></li>
+		</ul>
+	</div>
+	</li>
+
+	
+		<li><a href="DiagnosisTest.html" accesskey="t"><i class ="fa fa-user"></i>Diagnosis Test</a>
+	<div class ="List">
+		<ul>
+		    <li><a href="Test1.html">Test 1</a> </li>
+			<li><a href="Test2.html">Test 2</a> <li>
+		</ul>
+	</div>
+	</li>
+
+		<li><a href="Profile.html" accesskey="p">Profile</a></li>
+		<li><a href="ContactUs.html" accesskey="c">Contact Us</a></li>
+		<li><a href="AboutUs.html" accesskey="a">About Us</a><li>
+		<li><a href="Sitemap.html" accesskey="s">Sitemap</a><li>
+
+	</ul>
+	</div>
+	</nav>
+
+<div class="breadcrumb">
+<span><a href="Home.html"> Home </a></span>
+<span> &#62; </span>
+<span><a href="DiagnosisTest.html">Diagnosis Test</a> </span> 
+<span> &#62; </span>
+<span>Test 2 </span>
+</div>
+
+</header>
+	<main>
+		<fieldset>
+			
+			<form action="Profile.html">
+
+			<div class="test2" >
+			
+				<p>Drage and drop the picture to its correct place. <br>what are these signs mean?</p>
+				
+				<div class="sticky">
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/stop.png" alt="1" draggable="true" ondragstart="drag(event)" id="drag1"></div>
+					<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/unevenRoad.png" alt="2" draggable="true" ondragstart="drag(event)" id="drag2"></div>
+					<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img  src="images/noParking.png" alt="3" draggable="true" ondragstart="drag(event)" id="drag3"></div>
+					<div id= "div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img  src="images/merge.png" alt="4"draggable="true" ondragstart="drag(event)" id="drag4"></div>
+					<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img  src="images/no Waiting.png" alt="5" draggable="true" ondragstart="drag(event)" id="drag5"></div>
+					<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/No_Right_Turn.png" alt="6" draggable="true" ondragstart="drag(event)" id="drag6"></div>
+					<div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/sign-of-no-u-turn.png" alt="7" draggable="true" ondragstart="drag(event)" id="drag7"></div>
+					<div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/PriorityForOncomingTraffic.png" alt="8" draggable="true" ondragstart="drag(event)" id="drag8"></div>
+					<div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/Curve-Left.png" alt="9" draggable="true" ondragstart="drag(event)" id="drag9"></div>
+					<div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/double_curve_left.png" alt="10" draggable="true" ondragstart="drag(event)" id="drag10"></div>
+					<div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/parking sign.png" alt="11" draggable="true" ondragstart="drag(event)" id="drag11"></div>
+					<div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img src="images/bump.png" alt="12" draggable="true" ondragstart="drag(event)" id="drag12"></div>
+				</div>
+
+				<div id="d1" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check1" class="textanswer" ></text>Stop Sign</div>
+
+				<div id="d2" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check2" class="textanswer" ></text>Uneven Road Sign</div>
+
+				<div id="d3" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check3" class="textanswer" ></text>No parking</div>
+
+				<div id="d4" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check4" class="textanswer" ></text>Merge Sign</div>
+				
+				<div id="d5" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check5" class="textanswer" ></text>Waiting sign</div>
+				
+				<div id="d6" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check6" class="textanswer" ></text>No right turn</div>
+				
+				<div id="d7" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check7" class="textanswer" ></text>No U turn</div>
+				
+				<div id="d8" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check8" class="textanswer" ></text>Priority for on coming traffic</div>
+				
+				<div id="d9" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check9" class="textanswer" ></text>Curve left</div>
+				
+				<div id="d10" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check10" class="textanswer" ></text>Double curve to left</div>
+				
+				<div id="d11" ondrop="drop(event)" ondragover="allowDrop(event)"><text id="check11" class="textanswer" ></text>Parking sign</div>
+				
+				<div id="d12" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<text id="check12" class="textanswer" ></text> 
+				Bump</div>
+
+				<input type="submit" value="Submit" onclick="return ImageCheckAndValdiation()">
+			</div>
+			</form> 
+		</fieldset>
+
+	</main>
+<footer>
+	<img src="images/ksu.png" alt="copy rights" width= "120" height="50">
+	<p>&#169; Drive With Us | 312IT Project </p>
+</footer>
+</body>
+</html>
